@@ -4,7 +4,7 @@ import org.osgi.framework.*;
 import pkg.ifce.SimpleServiceIfce;
 
 //https://www.baeldung.com/osgi
-//nov11:osgi-client:1.0-SNAPSHOT
+//nov11/osgi-client/1.0-SNAPSHOT
 public class Client implements BundleActivator, ServiceListener {
     private BundleContext ctx;
     private ServiceReference serviceReference;

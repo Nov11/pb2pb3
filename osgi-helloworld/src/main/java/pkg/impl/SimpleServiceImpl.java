@@ -8,7 +8,7 @@ import pkg.ifce.SimpleServiceIfce;
 
 import java.util.Hashtable;
 //https://www.baeldung.com/osgi
-//nov11:osgi-helloworld:1.0-SNAPSHOT
+//nov11/osgi-helloworld/1.0-SNAPSHOT
 public class SimpleServiceImpl implements SimpleServiceIfce, BundleActivator {
     private ServiceReference<SimpleServiceIfce> reference;
     private ServiceRegistration<SimpleServiceIfce> registration;
