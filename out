@@ -1,0 +1,70 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] pb2-pb3
+[INFO] pb2
+[INFO] pb3
+[INFO] combine
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building pb2-pb3 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pb2-pb3 ---
+[INFO] nov11:pb2-pb3:pom:1.0-SNAPSHOT
+[INFO] \- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO]    +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building pb2 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pb2 ---
+[INFO] nov11:pb2:jar:1.0-SNAPSHOT
+[INFO] +- com.google.protobuf:protobuf-java:jar:2.6.1:compile
+[INFO] \- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO]    +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building pb3 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ pb3 ---
+[INFO] nov11:pb3:jar:1.0-SNAPSHOT
+[INFO] +- com.google.protobuf:protobuf-java:jar:3.8.0:compile
+[INFO] \- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO]    +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building combine 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ combine ---
+[INFO] nov11:combine:jar:1.0-SNAPSHOT
+[INFO] +- nov11:pb2:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.6.1:compile
+[INFO] |  \- (ch.qos.logback:logback-classic:jar:1.2.3:compile - omitted for duplicate)
+[INFO] +- nov11:pb3:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- (com.google.protobuf:protobuf-java:jar:3.8.0:compile - omitted for conflict with 2.6.1)
+[INFO] |  \- (ch.qos.logback:logback-classic:jar:1.2.3:compile - omitted for duplicate)
+[INFO] \- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO]    +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] pb2-pb3 ............................................ SUCCESS [  0.862 s]
+[INFO] pb2 ................................................ SUCCESS [  0.049 s]
+[INFO] pb3 ................................................ SUCCESS [  0.027 s]
+[INFO] combine ............................................ SUCCESS [  0.024 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.256 s
+[INFO] Finished at: 2019-11-19T17:24:15+08:00
+[INFO] Final Memory: 15M/220M
+[INFO] ------------------------------------------------------------------------

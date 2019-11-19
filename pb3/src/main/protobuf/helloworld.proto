@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package helloworld;
+
+// The greeter service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+    }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+    string s = 1;
+    double d = 2;
+    float f = 3;
+    int32 i32 = 4;
+    int64 i64 = 5;
+    uint32 u32 = 6;
+    uint64 u64 = 7;
+    sint32 s32 = 8;
+    sint64 s64 = 9;
+    fixed32 f32 = 10;
+    fixed64 f64 = 11;
+    sfixed64 sf64 = 12;
+    sfixed32 sf32 = 13;
+    bool b = 14;
+    bytes ba = 15;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}
+
+
+message HelloReply2 {
+    string message = 1;
+}
+
+enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+}
+
+message Item {
+    int32 id = 1;
+    string name = 2;
+    Corpus corpus = 3;
+    oneof uuu {
+        string s = 4;
+        bool b = 5;
+    }
+    map<string, HelloReply> map1 = 6;
+    map<string, int32> map2 = 7;
+    repeated Corpus corpusList = 8;
+    map<string, Corpus> map3 = 9;
+}
+
+message Inner {
+    int32 i32 = 1;
+    repeated Item itemList = 2;
+}
+message Outer {
+    Middle middle = 1;
+}
+message Middle {
+    Inner inner = 1;
+}
+
+message Re {
+    repeated Re reList = 1;
+}
