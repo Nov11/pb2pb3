@@ -2,6 +2,8 @@ syntax = "proto2";
 
 package helloworld;
 
+option java_package = "com.abc.df";
+
 // The greeter service definition.
 service Greeter {
     // Sends a greeting
